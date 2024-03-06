@@ -7,8 +7,7 @@ const excangeRate = document.getElementById('excangeRate');
 updateRate();
 
 function updateRate(){
-    fetch(` https://v6.exchangerate-api.com/v6/35b6b2ed5de4deeaa97261c9/latest/${currencyFirst.
-    value}`
+    fetch(` https://v6.exchangerate-api.com/v6/35b6b2ed5de4deeaa97261c9/latest/${currencyFirst.value}`
     ).then((res)=>res.json()).then((data)=>{
         console.log(data);
         const rate = data.conversion_rates[currencySecond.value];
